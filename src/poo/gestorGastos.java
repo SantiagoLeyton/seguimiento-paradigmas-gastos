@@ -27,6 +27,31 @@ public class GestorGastos {
         }
     }
 }
+public double calcularTotal() {
+    double total = 0;
+
+    for (gastos gasto : gastos) {
+        total = total + gasto.getmonto();
+    }
+
+    return total;
+}
+public gastos obtenerGastoMayor() {
+
+    if (gastos.isEmpty()) {
+        return null;
+    }
+
+    gastos mayor = gastos.get(0);
+
+    for (gastos gasto : gastos) {
+        if (gasto.getmonto() > mayor.getmonto()) {
+            mayor = gasto;
+        }
+    }
+
+    return mayor;
+}
 
 
 }
