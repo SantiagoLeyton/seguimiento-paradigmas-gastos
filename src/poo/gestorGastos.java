@@ -73,5 +73,26 @@ public void filtrarGastos(double montoMinimo) {
         System.out.println("No hay gastos mayores a $" + montoMinimo);
     }
 }
+public void buscarGastoPorConcepto(String concepto) {
+
+    boolean encontrado = false;
+
+    for (gastos gasto : gastos) {
+
+        if (gasto.getconcepto().toLowerCase().contains(concepto.toLowerCase())) {
+
+            System.out.println("Concepto: " + gasto.getconcepto());
+            System.out.println("Monto: $" + gasto.getmonto());
+            System.out.println("Categoria: " + gasto.getcategoria());
+            System.out.println("----------------------");
+
+            encontrado = true;
+        }
+    }
+
+    if (!encontrado) {
+        System.out.println("No se encontraron gastos con ese concepto");
+    }
+}
 
 }
