@@ -52,6 +52,26 @@ public gastos obtenerGastoMayor() {
 
     return mayor;
 }
+public void filtrarGastos(double montoMinimo) {
 
+    boolean encontrado = false;
+
+    for (gastos gasto : gastos) {
+
+        if (gasto.getmonto() > montoMinimo) {
+
+            System.out.println("Concepto: " + gasto.getconcepto());
+            System.out.println("Monto: $" + gasto.getmonto());
+            System.out.println("Categoria: " + gasto.getcategoria());
+            System.out.println("----------------------");
+
+            encontrado = true;
+        }
+    }
+
+    if (!encontrado) {
+        System.out.println("No hay gastos mayores a $" + montoMinimo);
+    }
+}
 
 }
