@@ -2,7 +2,16 @@ package poo;
 
 import java.util.Scanner;
 
+/**
+ * Ejecuta el menú interactivo del sistema de control de gastos.
+ */
 public class main {
+
+    /**
+     * Inicia la aplicación y procesa las opciones elegidas por el usuario.
+     *
+     * @param args argumentos de línea de comandos; no se utilizan
+     */
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -22,6 +31,7 @@ public class main {
             System.out.print("Seleccione una opcion: ");
 
             opcion = scanner.nextInt();
+            // Consume el salto de línea pendiente antes de leer texto.
             scanner.nextLine();
 
             switch (opcion) {
